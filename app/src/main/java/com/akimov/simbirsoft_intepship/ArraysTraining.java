@@ -73,8 +73,18 @@ public class ArraysTraining {
         if(numbersCount<1){
             return new int[]{};
         }
-
-        return new int[]{};
+        if(numbersCount<2){
+            return new int[]{1};
+        }
+        else {
+            int[] array = new int[numbersCount];
+            array[0] = 1;
+            array[1] = 1;
+            for(int i = 2; i<=array.length-1;i++){
+                array[i] = array[i-2]+array[i-1];
+            }
+            return array;
+        }
     }
 
     /**
@@ -86,6 +96,7 @@ public class ArraysTraining {
      * элементов
      */
     public int maxCountSymbol(int[] array) {
+
         //TODO: implement it
         return 0;
     }
