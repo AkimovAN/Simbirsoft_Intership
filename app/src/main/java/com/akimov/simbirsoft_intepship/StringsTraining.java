@@ -89,7 +89,16 @@ public class StringsTraining {
      * @return текст, где цыфры заменены словами
      */
     public String replaceAllNumbers(String text) {
-        return text;
+        return text.replace("1", "one")
+                .replace("2", "two")
+                .replace("3", "three")
+                .replace("4", "four")
+                .replace("5", "five")
+                .replace("6", "six")
+                .replace("7", "seven")
+                .replace("8", "eight")
+                .replace("9", "nine")
+                .replace("0", "zero");
     }
 
     /**
