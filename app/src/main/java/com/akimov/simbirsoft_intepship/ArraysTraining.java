@@ -3,8 +3,6 @@ package com.akimov.simbirsoft_intepship;
 /**
  * Created by Toxo on 06.11.2019
  */
-
-
 public class ArraysTraining {
     /**
      * Метод должен сортировать входящий массив
@@ -96,8 +94,23 @@ public class ArraysTraining {
      * элементов
      */
     public int maxCountSymbol(int[] array) {
+        int number = 0;
+        int count = 0;
 
+        for(int i = 0; i<=array.length-1; i++){
+            int temp_number = array[i];
+            int temp_count = 0;
+            for(int j = 0; j<=array.length-1;j++){
+                if(temp_number==array[j]){
+                    temp_count++;
+                }
+            }
+            if(temp_count>count){
+                count = temp_count;
+                number = temp_number;
+            }
+        }
         //TODO: implement it
-        return 0;
+        return number;
     }
 }

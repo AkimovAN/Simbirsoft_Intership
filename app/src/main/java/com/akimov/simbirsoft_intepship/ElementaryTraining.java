@@ -3,7 +3,6 @@ package com.akimov.simbirsoft_intepship;
 /**
  * Created by Toxo on 04.11.2019
  */
-
 public class ElementaryTraining {
     /**
      * Метод должен возвращать среднее значение

@@ -3,8 +3,6 @@ package com.akimov.simbirsoft_intepship;
 /**
  * Created by Toxo on 04.11.2019
  */
-
-
 public class StringsTraining {
     /**
      * Метод по созданию строки,
@@ -16,13 +14,12 @@ public class StringsTraining {
      * элементов строки text
      */
     public String getOddCharacterString(String text) {
-        if(text.isEmpty()){
+        if (text.isEmpty()) {
             return text;
-        }
-        else {
+        } else {
             StringBuilder result = new StringBuilder();
-            for(int i=0; i<=text.length()-1;i++){
-                if(i%2>0){
+            for (int i = 0; i <= text.length() - 1; i++) {
+                if (i % 2 > 0) {
                     result.append(text.charAt(i));
                 }
             }
@@ -41,9 +38,30 @@ public class StringsTraining {
      * вернуть пустой массив
      */
     public int[] getArrayLastSymbol(String text) {
-//        int count = text.
-        //TODO: implement it
-        return new int[]{};
+        if (text.isEmpty()) {
+            return new int[]{};
+        }
+        char last_char = text.charAt(text.length() - 1);
+        char[] char_array = text.toCharArray();
+        int count = 0;
+        for (char s : char_array) {
+            if (s == last_char) {
+                count++;
+            }
+        }
+        if (count == 1) {
+            return new int[]{};
+        } else {
+            int[] array = new int[count];
+            int temp = 0;
+            for (int i = 0; i <= char_array.length - 1; i++) {
+                if (char_array[i] == last_char) {
+                    array[temp] = i;
+                    temp++;
+                }
+            }
+            return array;
+        }
     }
 
     /**
@@ -55,8 +73,8 @@ public class StringsTraining {
      */
     public int getNumbersCount(String text) {
         int count = 0;
-        for(char c : text.toCharArray()){
-            if(Character.isDigit(c)){
+        for (char c : text.toCharArray()) {
+            if (Character.isDigit(c)) {
                 count++;
             }
         }
@@ -71,7 +89,6 @@ public class StringsTraining {
      * @return текст, где цыфры заменены словами
      */
     public String replaceAllNumbers(String text) {
-        //TODO: implement it
         return text;
     }
 
@@ -85,11 +102,10 @@ public class StringsTraining {
     public String capitalReverse(String text) {
         char[] array = text.toCharArray();
 
-        for(int i = 0; i<=array.length-1;i++){
-            if(Character.isUpperCase(array[i])){
+        for (int i = 0; i <= array.length - 1; i++) {
+            if (Character.isUpperCase(array[i])) {
                 array[i] = Character.toLowerCase(array[i]);
-            }
-            else {
+            } else {
                 array[i] = Character.toUpperCase(array[i]);
             }
         }
